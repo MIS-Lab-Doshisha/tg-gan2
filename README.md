@@ -1,5 +1,5 @@
 # Task Guided GAN II
-Code for our paper: Synthesizing and Augmenting Structural Connectivity Matrices for Connectivity Regression Using Task-guided Generative Adversarial Network
+Code for our paper: Task-guided Generative Adversarial Networks for Synthesizing and Augmenting Structural Connectivity Matrices for Connectivity-Based Prediction
 
 paper: xxxx.xxxxx.xxxxx.xxxx
 
