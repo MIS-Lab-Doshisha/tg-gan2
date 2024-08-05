@@ -24,7 +24,7 @@ device = torch.device('cuda') if torch.cuda.is_available() else torch.device(
     'cpu')
 print('device: ', device)
 
-data_dir = '../data'
+data_dir = '../data/hcp-ya_hcpmmp1_sample_data'
 n_epochs = 2000
 n_critics = 1
 dropout_rate = [0.5, 0.4, 0.3, 0.2, 0.1]
@@ -33,11 +33,11 @@ alphas = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
 # ------ Load NIMH datasets ------- #
 transform = transforms.Compose([transforms.ToTensor()])
 train_datasets = HCPYASC(
-    participants_csv='../data/hcp-ya_hcmppm1_sample_data/hcp-motor_disc_train.csv',
+    participants_csv=f'{data_dir}/hcp-motor_disc_train.csv',
     target='motor', transforms=transform,
     data_dir=f'{data_dir}/structural_connectivity-hcp')
 valid_datasets = HCPYASC(
-    participants_csv='../data/hcp-ya_hcmppm1_sample_data/hcp-motor_disc_valid.csv',
+    participants_csv=f'{data_dir}/hcp-motor_disc_valid.csv',
     target='motor', data_dir=f'{data_dir}/structural_connectivity-hcp',
     transforms=transform)
 train_loader = DataLoader(dataset=train_datasets, batch_size=2, shuffle=True)
