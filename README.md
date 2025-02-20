@@ -74,14 +74,14 @@ Additionally, the following optional parameters can be tuned:
 |---|---|
 | `alpha` | Learning rate for the critics, generator, and regressor. |
 | `betas` | Beta parameters for the Adam optimizer. |
-| `start` | (Description needed) |
-| `patience` | (Description needed) |
+| `start` | Minimum number of epochs to be trained |
+| `patience` | Number of epochs to wait before stopping training if the loss does not improve |
 
 ##### TG GAN II-Specific Parameters  
 
 | Parameter | Description |
 |---|---|
-| `alphas` | List of alpha values used for (XXX - description needed). |
+| `alphas` | List of alpha values used for the balancing the WGAN-GP loass and regressor loss. |
 
 #### 3.3 Run the Training Script  
 
