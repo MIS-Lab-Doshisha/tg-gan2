@@ -46,7 +46,7 @@ print('y: ', y.shape)
 # ------- Regression ------ #
 # Hyperparameter setting
 alphas = [2 ** i for i in range(-10, 6, 2)]
-l1_ratios = [0.2 ** i for i in range(0, 6)]
+l1_ratios = [0.2 * i for i in range(0, 6)]
 params = []
 for a in alphas:
     for l in l1_ratios:
